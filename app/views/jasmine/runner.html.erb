@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <title>Jasmine Spec Runner</title>
+  <link rel="shortcut icon" type="image/png" href="<%= asset_path 'jasmine_favicon.png' %>" />
+  <%= stylesheet_link_tag "jasmine" %>
+  <%= javascript_include_tag "jasmine", "jasmine-html" %>
+
+<% @tests.each do |test| -%>
+  <%= javascript_include_tag test %>
+<% end -%>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+</head>
+
+<body>
+</body>
+</html>

@@ -4,9 +4,9 @@ require File.expand_path('../lib/rails_sandbox_jasmine/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Rodrigo Rosenfeld Rosas"]
   gem.email         = ["rr.rosas@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Add Jasmine spec runner to Rails}
+  gem.summary       = %q{Use rails-sandbox-assets to serve the assets}
+  gem.homepage      = "http://github.com/rosenfeld/rails_sandbox_jasmine"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "rails_sandbox_jasmine"
   gem.require_paths = ["lib"]
   gem.version       = RailsSandboxJasmine::VERSION
+
+  gem.add_dependency 'rails-sandbox-assets', '>= 0.0.2'
 end
