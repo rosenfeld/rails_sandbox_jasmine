@@ -1,6 +1,6 @@
-# RailsSandboxJasmine
+# Jasmine specs for the Rails asset pipeline
 
-TODO: Write a gem description
+Run your specs while taking advantage of the Rails asset pipeline.
 
 ## Installation
 
@@ -8,17 +8,31 @@ Add this line to your application's Gemfile:
 
     gem 'rails_sandbox_jasmine'
 
+Or if you prefer to use the master branch:
+
+    gem 'rails_sandbox_jasmine', git: 'git://github.com/rosenfeld/rails_sandbox_jasmine' # or:
+    gem 'rails_sandbox_jasmine', github: 'rosenfeld/rails_sandbox_jasmine' # Bundler-pre syntax
+
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install rails_sandbox_jasmine
-
+    
 ## Usage
 
-TODO: Write usage instructions here
+    $ rake sandbox_assets:serve
+
+If you only intend to use the Jasmine test runner with the Rails Sandbox Assets gem, you can
+set the default template to 'jasmine/runner' in your config/application.rb, for example:
+
+    config.sandbox_assets.template = 'jasmine/runner'
+
+Then name your specs as specs/javascripts/some\_spec.js.coffee.
+
+By default, this gem will only enable the Jasmine test runner for specs under
+specs/javascripts/jasmine/. Run them by browsing to http://localhost:5000/jasmine.
+
+For more details on settings please take a look at the
+[rails-sandbox-assets gem](http://github.com/rosenfeld/rails-sandbox-assets).
 
 ## Contributing
 
