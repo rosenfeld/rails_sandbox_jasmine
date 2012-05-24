@@ -26,10 +26,10 @@ set the default template to 'jasmine/runner' in your config/application.rb, for 
 
     config.sandbox_assets.template = 'jasmine/runner'
 
-Then name your specs as specs/javascripts/some\_spec.js.coffee.
+Then name your specs as spec/javascripts/some\_spec.js.coffee.
 
 By default, this gem will only enable the Jasmine test runner for specs under
-specs/javascripts/jasmine/. Run them by browsing to http://localhost:5000/jasmine.
+spec/javascripts/jasmine/. Run them by browsing to http://localhost:5000/jasmine.
 
 For more details on settings please take a look at the
 [rails-sandbox-assets gem](http://github.com/rosenfeld/rails-sandbox-assets).
