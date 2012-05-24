@@ -7,6 +7,10 @@
   <%= stylesheet_link_tag "jasmine" %>
   <%= javascript_include_tag "jasmine", "jasmine-html" %>
 
+<% @stylesheets.each do |css| -%>
+  <%= stylesheet_link_tag css %>
+<% end -%>
+
 <% @tests.each do |test| -%>
   <%= javascript_include_tag test %>
 <% end -%>

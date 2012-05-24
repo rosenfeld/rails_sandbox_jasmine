@@ -15,5 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = RailsSandboxJasmine::VERSION
 
-  gem.add_dependency 'rails-sandbox-assets', '>= 0.0.3'
+  gem.add_dependency 'rails-sandbox-assets', '>= 0.0.4'
 end
