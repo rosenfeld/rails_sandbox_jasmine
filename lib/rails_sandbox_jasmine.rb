@@ -3,7 +3,7 @@ require "rails-sandbox-assets"
 
 module RailsSandboxJasmine
   class JasmineFilter
-    def self.filter(controller)
+    def self.before(controller)
       controller.template = 'jasmine/runner' if controller.params[:path].try :start_with?, 'jasmine'
     end
   end
